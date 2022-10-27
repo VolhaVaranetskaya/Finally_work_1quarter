@@ -9,14 +9,24 @@
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
 
-Console.WriteLine("Введите длину массива: "); // запрашиваем длину массива
+Console.WriteLine("Введите длину массива: "); 
 int size = Convert.ToInt32(Console.ReadLine());
-string[] array = new string[size]; // создаем массив указанной длины
+string[] array = new string[size]; 
 LineArray(array);  
 PrintArray(array);
 Console.WriteLine();
 string[] newLineArray = NewLineArray(array);
 PrintArray(newLineArray);
+
+
+void LineArray(string[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.WriteLine($"{i + 1}. Введите значение массива");
+        array[i] = Console.ReadLine();
+    }
+}
 
 void PrintArray(string[] array)
 {
@@ -29,25 +39,16 @@ void PrintArray(string[] array)
     Console.WriteLine("]");
 }
 
-void LineArray(string[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.WriteLine($"{i + 1}. Введите значение массива");
-        array[i] = Console.ReadLine();
-    }
-}
-
 string[] NewLineArray(string[] array)
 {
     string[] newArray = new string[size];
-    for (int i = 0; i < array.Length; i++) // выполняем проверку введенных пользоателем слов на количество символов
+    for (int i = 0; i < array.Length; i++) 
     {
-        if(array[i].Length <= 3)  // ели кол во символов меньше или равно 3, то символы записываем в новый массив
+        if(array[i].Length <= 3)  
         {
             newArray[i] = array[i];
         }
     }
-    return newArray; // возвращаем новый массив
+    return newArray; 
 }
 

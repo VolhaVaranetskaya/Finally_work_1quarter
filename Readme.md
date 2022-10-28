@@ -18,4 +18,4 @@
 
 
 Блок-схема задачи представлена по ссылке:
-[https://app.diagrams.net/#G13sUzvyCV-G5xpqiGSgMkS3wMY__5wKiZ]
+[https://app.diagrams.net/#G1QwfIMxIFZeYiRTvTOjAJN0Biu4smoMEx]

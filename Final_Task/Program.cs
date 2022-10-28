@@ -21,7 +21,7 @@ PrintArray(newLineArray);
 
 void LineArray(string[] array)
 {
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < size; i++)
     {
         Console.WriteLine($"{i + 1}. Введите значение массива");
         array[i] = Console.ReadLine();
